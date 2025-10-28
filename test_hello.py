@@ -2,11 +2,9 @@ from hello import say_hello
 
 def test_hello():
     result = say_hello()
-    if result == "Hello World":
-        print("✅ TEST PASSED!")
-        return True
-    else:
-        print("❌ TEST FAILED!")
-        return False
+    assert result == "Hello World", "Test Failed!"
+    print("✅ Test Passed!")
 
-test_hello()
+if __name__ == "__main__":
+    test_hello()
+    print("🎉 All tests passed!")
